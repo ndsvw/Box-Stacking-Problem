@@ -175,3 +175,28 @@ def maxHeightTry3(d1, d2, d3):
                 max_tmp = max(max_tmp, max_height[box1_x, box1_y] + box2_z)
             max_height[box2_x, box2_y] = max_tmp
     return max([v for _, v in max_height.items()])
+
+
+def maxHeight(d1, d2, d3):
+    """
+    A method that calculates largest possible tower height of given boxes.
+    Problem description: https://practice.geeksforgeeks.org/problems/box-stacking/1
+        time complexity: O(n^2)
+        space complexity: O(n)
+
+    Parameters
+    ----------
+    d1 : int[]
+        a list of int values representing the 1st dimension of a / multiple 3d-box(es)
+    d2 : int[]
+        a list of int values representing the 2nd dimension of a / multiple 3d-box(es)
+    d3 : int[]
+        a list of int values representing the 3rd dimension of a / multiple 3d-box(es)
+
+    Returns
+    -------
+    x  : int
+        the largest possible tower height
+    """
+
+    return maxHeightTry3(d1, d2, d3)
